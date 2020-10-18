@@ -1,8 +1,7 @@
 import helperfunctions as hf
 
-x = 52957
+#x = [60661,38953,45197,17382,85625,21851,62832,30851,79133,17989,99349,7753,60937,1579]
+#x = [868603239995895957265329235683657696637941,228062432992455043714072947773418161712811]
 
-if hf.joeIsPrime(x):
-  print(str(x) + " is prime!")
-else:
-  print(str(x) + " is not prime!")
+print(hf.joeIsPrime(49))
+print(hf.benchIsPrime(49))
