@@ -55,32 +55,25 @@ def joeIsPrime(x):
     if x == 2 or x == 3:
         return True
     
-    if x < 2 or x % 2 == 0:
+    if x < 2 or x % 2 == 0 or x % 3 == 0:
         return False
     
-    for i in range(3,int(x**0.5)+1,2):
-        if x % i == 0:
+    y = 5
+    z = 7
+    #count = 0
+    
+    while z <= (int(x**0.5) + 1):
+        if x % z == 0 or x % y == 0:
             return False
-    return True
-    
-  
-#Benchmarking
-def benchIsPrime(x):
-  
-    if x == 2 or x == 3:
-        return True
-    
-    if x < 2 or x % 2 == 0:
-        return False
-    
-    for i in range(3,int(x**0.5)+1,2):
-        if x % i == 0:
-            return False
+        y = y + 6
+        z = z + 6
+        #count += 1
+    #print(y,z,count)    
     return True
     
   
 def joeFactorRSA(x):
-#massively naive
+#massively limited
 
     if x%2==0:
         print("2, "+str(x/2))
