@@ -60,15 +60,13 @@ def joeIsPrime(x):
     
     y = 5
     z = 7
-    #count = 0
     
-    while z <= (int(x**0.5) + 1):
+    while y <= (int(x**0.5) + 1):
         if x % z == 0 or x % y == 0:
             return False
         y = y + 6
         z = z + 6
-        #count += 1
-    #print(y,z,count)    
+            
     return True
     
   
