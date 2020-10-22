@@ -69,6 +69,19 @@ def joeIsPrime(x):
             
     return True
     
+    
+def joeGeneratePrimes(x):
+    #naive trial division
+    #impractical at x = 1000000
+    count = 0
+    for i in range(x + 1):
+        if joeIsPrime(i):
+            print(i)
+            count += 1
+        
+    print("\n\n" + "There are {} primes "
+          "from 0 to {}".format(count,x))
+    
   
 def joeFactorRSA(x):
 #massively limited
