@@ -70,17 +70,24 @@ def joeIsPrime(x):
     return True
     
     
-def joeGeneratePrimes(x):
+def joeGeneratePrimesTo100():
     #naive trial division
     #impractical at x = 1000000
-    count = 0
-    for i in range(x + 1):
+    for i in range(101):
         if joeIsPrime(i):
-            print(i)
-            count += 1
-        
-    print("\n\n" + "There are {} primes "
-          "from 0 to {}".format(count,x))
+            yield i
+            
+    
+def joeSieve(x):
+    #Sieve of Eratosthenes
+    primes = range(x + 1)
+    primes[1] = 0
+    
+    for num in primes:
+        if num and num < (x**0.5) + 1:
+            for i in range(num * 2,x +1,num):
+                primes[i] = 0
+    return set(filter(lambda x: x != 0,primes))
     
   
 def joeFactorRSA(x):
