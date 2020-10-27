@@ -70,12 +70,16 @@ def joeIsPrime(x):
     return True
     
     
-def joeGeneratePrimesTo100():
+def joeGeneratePrimesNaive(x):
     #naive trial division
     #impractical at x = 1000000
-    for i in range(101):
+    for i in range(x + 1):
         if joeIsPrime(i):
             yield i
+            
+        
+def joeSetOfPrimesNaive(x):
+    return set(joeGeneratePrimesNaive(x))
             
     
 def joeSieve(x):
